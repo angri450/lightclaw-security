@@ -1,0 +1,608 @@
+{
+  "channels": {
+    "discord": {
+      "enabled": false,
+      "botPrefix": "",
+      "botToken": "",
+      "httpProxy": "",
+      "httpProxyAuth": ""
+    },
+    "dingtalk": {
+      "enabled": false,
+      "botPrefix": "",
+      "clientId": "",
+      "clientSecret": "",
+      "mediaDir": "~/.lightclaw/media"
+    },
+    "feishu": {
+      "enabled": false,
+      "botPrefix": "",
+      "appId": "",
+      "appSecret": "",
+      "encryptKey": "",
+      "verificationToken": "",
+      "mediaDir": "~/.lightclaw/media"
+    },
+    "qqbot": {
+      "enabled": false,
+      "botPrefix": "",
+      "appId": "",
+      "clientSecret": "",
+      "stt": {},
+      "tts": {}
+    },
+    "yuanbao": {
+      "enabled": true,
+      "botPrefix": "",
+      "appKey": "",
+      "appSecret": "",
+      "token": "",
+      "identifier": "",
+      "apiDomain": "bot.yuanbao.tencent.com",
+      "wsUrl": "wss://bot-wss.yuanbao.tencent.com/wss/connection",
+      "routeEnv": ""
+    },
+    "dashboard": {
+      "enabled": true,
+      "botPrefix": ""
+    },
+    "wecom": {
+      "enabled": false,
+      "botPrefix": "",
+      "botId": "",
+      "secret": "",
+      "name": "",
+      "websocketUrl": "",
+      "dmPolicy": "open",
+      "allowFrom": [],
+      "groupPolicy": "open",
+      "groupAllowFrom": [],
+      "groups": {},
+      "sendThinkingMessage": true,
+      "mediaDir": "~/.lightclaw/media",
+      "mediaLocalRoots": []
+    },
+    "weixin": {
+      "enabled": true,
+      "botPrefix": "",
+      "mediaDir": "~/.lightclaw/media",
+      "showToolDetails": true,
+      "accounts": [
+        {
+          "account_id": "9a8cef0a031d-im-bot",
+          "account_name": "",
+          "baseUrl": "https://ilinkai.weixin.qq.com",
+          "token": "",
+          "configured": true,
+          "botUin": "",
+          "userUin": "o9cq809bXQwawkUfdemdqzjabAQQ@im.wechat"
+        }
+      ]
+    },
+    "lightclawbot": {
+      "enabled": true,
+      "apiKey": "",
+      "apiKeys": [],
+      "apiBaseUrl": "",
+      "name": "",
+      "dmPolicy": "open",
+      "allowFrom": [
+        "*"
+      ],
+      "systemPrompt": "",
+      "accounts": {}
+    }
+  },
+  "lastApi": {
+    "host": "0.0.0.0",
+    "port": 13426,
+    "ssl": false
+  },
+  "agents": {
+    "defaults": {
+      "heartbeat": {
+        "every": "10m",
+        "target": "main"
+      },
+      "proactivity": {
+        "enabled": true,
+        "every": "30m",
+        "target": "last",
+        "cooldownHours": 8.0,
+        "quietHours": {
+          "start": "22:00",
+          "end": "08:00"
+        },
+        "dailyAnalysisTime": "23:00"
+      }
+    },
+    "running": {
+      "maxIters": 100,
+      "maxInputLength": 131072
+    },
+    "language": "zh",
+    "installedPromptsLanguage": "zh"
+  },
+  "lastDispatch": {
+    "channel": "lightclawbot",
+    "userId": "100041507898",
+    "canonicalUserId": "",
+    "sessionId": "lightclaw:100041507898"
+  },
+  "showToolDetails": true,
+  "showThinking": false,
+  "models": {
+    "providers": {
+      "tencent-token-plan": {
+        "baseUrl": "https://api.lkeap.cloud.tencent.com/plan/v3",
+        "apiKey": "",
+        "extraModels": [
+          {
+            "id": "minimax-m2.5",
+            "name": "MiniMax 2.5",
+            "enabled": false
+          },
+          {
+            "id": "minimax-m2.7",
+            "name": "MiniMax 2.7",
+            "enabled": false
+          },
+          {
+            "id": "glm-5.1",
+            "name": "GLM-5.1",
+            "enabled": false
+          }
+        ],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "tencent-coding-plan": {
+        "baseUrl": "https://api.lkeap.cloud.tencent.com/coding/v3",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "deepseek": {
+        "baseUrl": "https://api.deepseek.com/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "dashscope": {
+        "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "volces": {
+        "baseUrl": "https://ark.cn-beijing.volces.com/api/coding/v3",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "zhipu": {
+        "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "moonshot": {
+        "baseUrl": "https://api.moonshot.cn/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "silicon": {
+        "baseUrl": "https://api.siliconflow.cn/v1",
+        "apiKey": "",
+        "extraModels": [
+          {
+            "id": "deepseek-ai/DeepSeek-V3",
+            "name": "DeepSeek V3",
+            "enabled": false
+          },
+          {
+            "id": "Qwen/Qwen2.5-72B-Instruct",
+            "name": "Qwen2.5 72B Instruct",
+            "enabled": false
+          },
+          {
+            "id": "deepseek-ai/DeepSeek-V4-Flash",
+            "name": "DeepSeek-V4-Flash",
+            "enabled": true,
+            "contextWindow": 1024000,
+            "maxTokens": 393000,
+            "reasoning": true,
+            "input": [
+              "text"
+            ]
+          },
+          {
+            "id": "Qwen/Qwen3.6-27B",
+            "name": "Qwen3.6-27B",
+            "enabled": true,
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ]
+          }
+        ],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "mimo": {
+        "baseUrl": "https://api.xiaomimimo.com/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "modelscope": {
+        "baseUrl": "https://api-inference.modelscope.cn/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "openai": {
+        "baseUrl": "https://api.openai.com/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "anthropic": {
+        "baseUrl": "https://api.anthropic.com/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "gemini": {
+        "baseUrl": "https://generativelanguage.googleapis.com/v1beta/openai",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "groq": {
+        "baseUrl": "https://api.groq.com/openai/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "openrouter": {
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "isCustom": false,
+        "models": [],
+        "headers": {},
+        "authHeader": false
+      },
+      "lian_tong": {
+        "baseUrl": "https://aigw-jnzs5.cucloud.cn:8443/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "name": "联通云",
+        "defaultBaseUrl": "https://aigw-jnzs5.cucloud.cn:8443/v1",
+        "isCustom": true,
+        "models": [
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax-M2.5",
+            "enabled": true,
+            "reasoning": true,
+            "input": [
+              "text"
+            ]
+          }
+        ],
+        "headers": {},
+        "authHeader": false
+      },
+      "chao_suan": {
+        "baseUrl": "https://api.scnet.cn/api/llm/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "name": "超算互联网",
+        "defaultBaseUrl": "https://api.scnet.cn/api/llm/v1",
+        "isCustom": true,
+        "models": [
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax-M2.5",
+            "enabled": true,
+            "reasoning": true,
+            "input": [
+              "text"
+            ]
+          }
+        ],
+        "headers": {},
+        "authHeader": false
+      },
+      "teng_xun": {
+        "baseUrl": "https://api.lkeap.cloud.tencent.com/plan/v3",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "name": "腾讯云",
+        "defaultBaseUrl": "https://api.lkeap.cloud.tencent.com/plan/v3/chat/completions",
+        "isCustom": true,
+        "models": [
+          {
+            "id": "hy3-preview",
+            "name": "hy3-preview",
+            "enabled": true,
+            "reasoning": true,
+            "input": [
+              "text"
+            ]
+          }
+        ],
+        "headers": {},
+        "authHeader": false
+      },
+      "dmxapi": {
+        "baseUrl": "https://www.dmxapi.cn/v1",
+        "apiKey": "",
+        "extraModels": [],
+        "chatModel": "",
+        "name": "dmxapi中转站",
+        "defaultBaseUrl": "https://www.dmxapi.cn/v1/chat/completions",
+        "isCustom": true,
+        "models": [
+          {
+            "id": "deepseek-v4-pro-guan",
+            "name": "deepseek-v4-pro",
+            "enabled": true,
+            "contextWindow": 102400,
+            "maxTokens": 393000,
+            "reasoning": true,
+            "input": [
+              "text"
+            ]
+          }
+        ],
+        "headers": {},
+        "authHeader": false
+      }
+    },
+    "activeLlm": "lian_tong/MiniMax-M2.5"
+  },
+  "skills": {
+    "entries": {
+      "ppt-to-video": {
+        "enabled": true
+      },
+      "mcporter": {
+        "enabled": true
+      },
+      "publisher-multi-platform": {
+        "enabled": true
+      },
+      "searxng": {
+        "enabled": true
+      },
+      "mmx-cli": {
+        "enabled": true
+      },
+      "health-check": {
+        "enabled": true
+      },
+      "lightclaw-backup": {
+        "enabled": true
+      },
+      "cron": {
+        "enabled": true
+      },
+      "install-skill": {
+        "enabled": true
+      },
+      "cloudbase": {
+        "enabled": true
+      },
+      "skill-creator": {
+        "enabled": true
+      },
+      "tencentcloud-infra": {
+        "enabled": true
+      },
+      "cvm-ai-doctor": {
+        "enabled": true
+      },
+      "file-reader": {
+        "enabled": true
+      },
+      "opencli": {
+        "enabled": true
+      },
+      "style-media-lib": {
+        "enabled": true
+      },
+      "pdf": {
+        "enabled": true
+      },
+      "self-improving-agent": {
+        "enabled": true
+      },
+      "nidhov01-proactive-agent": {
+        "enabled": true
+      },
+      "yuanbao-doctor": {
+        "enabled": true
+      }
+    }
+  },
+  "openclaw": {},
+  "embedding": {
+    "provider": "local",
+    "localModel": "jinaai/jina-embeddings-v2-base-zh",
+    "apiKey": "",
+    "baseUrl": "",
+    "modelName": "",
+    "dimensions": 512
+  },
+  "proactivity": {
+    "enabled": true,
+    "every": "30m",
+    "target": "last",
+    "cooldownHours": 8.0,
+    "quietHours": {
+      "start": "22:00",
+      "end": "08:00"
+    },
+    "dailyAnalysisTime": "23:00"
+  },
+  "dreaming": {
+    "enabled": true,
+    "cron": "0 2 * * *",
+    "lightIngestEnabled": true,
+    "lightIngestCron": "30 14 * * *",
+    "timezone": "Asia/Shanghai",
+    "recent_days": 7,
+    "max_daily_talk_chars": 10000,
+    "max_recent_memory_chars": 20000,
+    "dynamic_threshold_base": 0.35,
+    "dynamic_threshold_max": 0.5,
+    "max_prune_ratio": 0.2,
+    "protectedTypes": [
+      "identity",
+      "constraint",
+      "todo",
+      "decision"
+    ],
+    "autoUpdateUserProfile": true,
+    "autoUpdateProactivity": true,
+    "autoUpdateTools": true,
+    "autoUpdateAgents": true,
+    "autoUpdateHeartbeat": false,
+    "writeDreamReport": true
+  },
+  "starOffice": {
+    "enabled": false,
+    "url": "http://127.0.0.1:19000"
+  },
+  "security": {
+    "recallScope": "current_session",
+    "dailyTalkRealtimeInjectionEnabled": false,
+    "includeRawSessionsInRealtimeRecall": false,
+    "privateToGroupRecallEnabled": false,
+    "groupToPrivateRecallEnabled": false,
+    "unknownUserMemoryPromotionEnabled": false,
+    "groupMemoryEnabled": false,
+    "secretRealtimeRecallEnabled": false,
+    "oldMetadataRealtimeRecallEnabled": false,
+    "groupSessionsPerUser": true,
+    "groupSharedSessionEnabled": false,
+    "ownerPrincipals": [
+      {
+        "channel": "dashboard",
+        "senderId": "default",
+        "principalId": "owner"
+      },
+      {
+        "channel": "yuanbao",
+        "senderId": "BAptWaOEFOxN9g+MJR4pDjBUULUcsfPHmqrsAbTOM+o=",
+        "principalId": "owner"
+      },
+      {
+        "channel": "weixin",
+        "senderId": "o9cq809bXQwawkUfdemdqzjabAQQ@im.wechat",
+        "principalId": "owner"
+      }
+    ],
+    "principalAliases": [
+      {
+        "principalId": "owner",
+        "aliases": [
+          {
+            "channel": "dashboard",
+            "senderId": "default"
+          },
+          {
+            "channel": "yuanbao",
+            "senderId": "BAptWaOEFOxN9g+MJR4pDjBUULUcsfPHmqrsAbTOM+o="
+          },
+          {
+            "channel": "weixin",
+            "senderId": "o9cq809bXQwawkUfdemdqzjabAQQ@im.wechat"
+          }
+        ]
+      }
+    ],
+    "autoRecallMaxTotalChars": 12000,
+    "autoRecallMaxCandidateChars": 2000,
+    "autoRecallMaxSessionResultChars": 2000,
+    "autoRecallMaxDailyTalkChars": 0,
+    "autoRecallMaxMemoryChars": 4000,
+    "summaryBlockMaxChars": 12000,
+    "extraPartsMaxTotalChars": 30000,
+    "toolMessageSingleMaxChars": 8000,
+    "toolMessageTotalMaxChars": 24000
+  }
+}

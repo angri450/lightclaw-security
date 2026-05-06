@@ -1,0 +1,18 @@
+[Unit]
+Description=LightClaw AI assistant service
+After=network.target
+
+[Service]
+Environment="PATH=/root/.local/bin:/root/.lightclaw/bin:/usr/local/lib/nodejs/node-v24.15.0-linux-x64/bin:/root/.local/share/pnpm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Type=simple
+Environment="HOME=/root"
+Environment="LIGHTCLAW_SERVICE_MODE=systemd"
+Environment="LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S=0"
+ExecStart=/root/.lightclaw/venv/bin/lightclaw run --from-configfile --log-level info
+Restart=on-failure
+RestartSec=5
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Install]
+WantedBy=multi-user.target

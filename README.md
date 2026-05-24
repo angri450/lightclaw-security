@@ -6,6 +6,14 @@
 
 ---
 
+## 项目简介 / Project Summary
+
+中文：本次发布围绕 LightClaw AI Agent 的研发过程展开，从需求拆解、风险识别到模块重构、联调验证，按“运行控制—会话隔离—主动消息质量—记忆系统—任务调度”的路径逐步推进。过程中先补齐 heartbeat 止血、上下文硬刹车与敏感信息过滤，再修复崩溃循环、完善主动消息与回归测试，保证每一步改动都可验证、可回滚、可持续迭代。
+
+English: This release is built on Python, asyncio, FastAPI-style service APIs, Qdrant, and a modular agent architecture. It combines CLI tooling, cron workers, prompt files, and pytest-based verification to deliver a secure, observable, and maintainable AI agent stack.
+
+---
+
 ## 一、项目概述
 
 本次攻坚对 LightClaw AI Agent 框架进行了系统性稳定性加固和安全性改造，涵盖 **7大模块**：
